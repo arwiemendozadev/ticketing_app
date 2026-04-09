@@ -79,7 +79,24 @@
 
                 Console.WriteLine();
             }
+            else if (response == "4")
+            {
+                Console.WriteLine("");
+
+                foreach (var ev in EventData.Events)
+                {
+                    Console.WriteLine($"{ ev.Name } - Available tickets: { ev.Capacity - ev.TicketsSold }\n");
+                }
+            }
+            else if (response != "X")
+            {
+                Console.WriteLine("\n===============================================");
+                Console.WriteLine(" Invalid response. Please try again (1-4 or X)");
+                Console.WriteLine("===============================================\n");
+            }
         }
+
+        Console.WriteLine("\n=== Thank you for using the ticketing system! ===\n");
     }
 
     private static void DisplayMenu()
@@ -88,6 +105,8 @@
         Console.WriteLine(" 1 - List Customers");
         Console.WriteLine(" 2 - List Events");
         Console.WriteLine(" 3 - List Customers' Events");
+        Console.WriteLine(" 4 - Future Events with available tickets");
+        Console.WriteLine(" X = Exit the program");
     }
 
     private static List<CustomerEventInfo> GetCustomerEvents(int customerId)

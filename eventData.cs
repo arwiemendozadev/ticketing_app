@@ -75,7 +75,7 @@ public static class EventData
             {
                 new EventCustomer { CustomerId = 923, BoughtTickets = 2 },
                 new EventCustomer { CustomerId = 786, BoughtTickets = 4 },
-                new EventCustomer { CustomerId = 121, BoughtTickets = 4 }
+                new EventCustomer { CustomerId = 121, BoughtTickets = 1 }
             }
         }
     };
